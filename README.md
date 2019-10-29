@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Boggle App
 
-## Available Scripts
+**Boggle** is a word game invented by **Allan Turoff**. The game is played using a plastic grid of lettered dice, in which players attempt to find words in sequences of adjacent letters.
 
-In the project directory, you can run:
+This app is an attempt to simulate the Boggle game play.
 
-### `npm start`
+### About Boggle
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [Boggle - wikipedia page](https://en.wikipedia.org/wiki/Boggle)
+2. [Existing Boggle Implementation](https://www.wordplays.com/boggle)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The app is being built in React.
 
-### `npm test`
+## Requirement Gathering
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Main Features
 
-### `npm run build`
+1. Build the 5X5 board with random letters.
+2. Users would be able to select the meaningful Words ( **length between 3 and 5** ).
+3. Someway of highlighting the selected tiles.
+4. List of Correct/Incorrect Words.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Bonus
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Allow typing the word
+2. Rotate the boggle board
+3. On hover of a word in the List of words, highlight the path of the word on the board.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Analysis
 
-### `npm run eject`
+**Feature 1: Build the 5X5 board**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This feature can be approached in 2 ways.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Build a board and fill it with 25 random letters. To make selection of more
+   meaningful words possible, we can take into account the frequency of alphabets in English.
+   [Cornell University's Link on cryptography](http://pi.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Have a large pool of words. For every game play, randomly select some of the words from the pool
+   and fill the board with these words along with a bunch of meaningless words thrown in the mix.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Lets implement the above feature...
