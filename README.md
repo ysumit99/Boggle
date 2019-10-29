@@ -40,3 +40,8 @@ This feature can be approached in 2 ways.
    and fill the board with these words along with a bunch of meaningless words thrown in the mix.
 
 Lets implement the above feature...
+
+
+## Deployment
+
+[https://ysumit99.github.io/boggle/)](https://ysumit99.github.io/boggle/)
