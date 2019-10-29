@@ -27,7 +27,8 @@ class Board extends React.Component {
 
                     <div className="row">
 
-                        <div className="col-6" id="board">
+                        {/* Board */}
+                        <div className="col-12" id="board">
                             <table>
                                 <tbody>
                                     <tr>
@@ -74,8 +75,16 @@ class Board extends React.Component {
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
+                    <br />
+                    <div className="col-6 offset-3">
+                        <div class="card">
+                            <div class="card-body">
+                                Selected Words go here...
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>

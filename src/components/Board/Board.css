@@ -11,3 +11,17 @@
   border-radius: 10%;
   background-color: aquamarine;
 }
+
+#board {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  align-self: center;
+}
+
+.card {
+  box-shadow: 2px 2px #d3d3d3;
+}
