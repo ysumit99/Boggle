@@ -1,0 +1,13 @@
+/* Board Container */
+#container {
+  /* background-color: rgb(238, 231, 221); */
+  margin-top: 2%;
+}
+
+/* Board Tile */
+.tile {
+  height: 50px;
+  width: 50px;
+  border-radius: 10%;
+  background-color: aquamarine;
+}
